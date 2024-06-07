@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<h1>User List</h1>
+<div th:each="user: ${users}">
+    <a th:href="@{/users/show(id=${user.getId()})}" th:text="${user.getName()}"></a>
+</div>
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Occupation</th>-->
+<!--        <th>Height</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="user : ${users}">-->
+<!--        <td th:text="${user.getId()}"></td>-->
+<!--        <td th:text="${user.getName()}"></td>-->
+<!--        <td th:text="${user.getOccupation()}"></td>-->
+<!--        <td th:text="${user.getHeight()}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+</body>
+</html>

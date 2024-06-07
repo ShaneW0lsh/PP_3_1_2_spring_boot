@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+<body>
+
+
+<form th:method="PATCH" th:action="@{/users/update(id=${user.getId()})}" th:object="${user}">
+    <label for="name-input">Enter username</label>
+    <input type="text" th:field="*{name}" id="name-input"/>
+    <br/>
+
+    <label for="height-input">Enter height</label>
+    <input type="text" th:field="*{height}" id="height-input"/>
+    <br/>
+
+    <label for="occupation-input">Enter occupation</label>
+    <input type="text" th:field="*{occupation}" id="occupation-input"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+</body>
+</html>
